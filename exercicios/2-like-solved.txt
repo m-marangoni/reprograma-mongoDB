@@ -1,0 +1,203 @@
+
+> db.todo.find({ "descricao" : /p/ } ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a4"),
+        "ordem" : 7,
+        "titulo" : "Titulo D",
+        "descricao" : "javascript",
+        "concluida" : "true",
+        "dataInclusao" : "07/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a8"),
+        "ordem" : 11,
+        "titulo" : "Titulo H",
+        "descricao" : "bootstrap",
+        "concluida" : "true",
+        "dataInclusao" : "11/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143af"),
+        "ordem" : 3,
+        "titulo" : "Titulo B",
+        "descricao" : "native script",
+        "concluida" : "true",
+        "dataInclusao" : "03/01/2018"
+}
+> db.todo.find({ "descricao" : /p$/ } ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a8"),
+        "ordem" : 11,
+        "titulo" : "Titulo H",
+        "descricao" : "bootstrap",
+        "concluida" : "true",
+        "dataInclusao" : "11/01/2018"
+}
+> db.todo.find({ "descricao" : /e$/ } ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a3"),
+        "ordem" : 6,
+        "titulo" : "Titulo D",
+        "descricao" : "react native",
+        "concluida" : "false",
+        "dataInclusao" : "06/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a5"),
+        "ordem" : 8,
+        "titulo" : "Titulo E",
+        "descricao" : "chocolate",
+        "concluida" : "true",
+        "dataInclusao" : "08/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a9"),
+        "ordem" : 12,
+        "titulo" : "Titulo J",
+        "descricao" : "backbone",
+        "concluida" : "true",
+        "dataInclusao" : "12/01/2018"
+}
+> db.todo.find({ "descricao" : /^h/ } ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143aa"),
+        "ordem" : 13,
+        "titulo" : "Titulo K",
+        "descricao" : "html",
+        "concluida" : "false",
+        "dataInclusao" : "13/01/2018"
+}
+> db.todo.find({ "descricao" : /js/ } ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a1"),
+        "ordem" : 4,
+        "titulo" : "Titulo C",
+        "descricao" : "angularjs",
+        "concluida" : "true",
+        "dataInclusao" : "04/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a6"),
+        "ordem" : 9,
+        "titulo" : "Titulo F",
+        "descricao" : "vuejs",
+        "concluida" : "false",
+        "dataInclusao" : "09/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143ae"),
+        "ordem" : 2,
+        "titulo" : "Titulo B",
+        "descricao" : "nodejs",
+        "concluida" : "false",
+        "dataInclusao" : "02/01/2018"
+}
+> db.todo.find({ "descricao" : /t$/ } ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a2"),
+        "ordem" : 5,
+        "titulo" : "Titulo D",
+        "descricao" : "react",
+        "concluida" : "false",
+        "dataInclusao" : "05/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a4"),
+        "ordem" : 7,
+        "titulo" : "Titulo D",
+        "descricao" : "javascript",
+        "concluida" : "true",
+        "dataInclusao" : "07/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143af"),
+        "ordem" : 3,
+        "titulo" : "Titulo B",
+        "descricao" : "native script",
+        "concluida" : "true",
+        "dataInclusao" : "03/01/2018"
+}
+> db.todo.find({ "descricao" : /l$/ } ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143aa"),
+        "ordem" : 13,
+        "titulo" : "Titulo K",
+        "descricao" : "html",
+        "concluida" : "false",
+        "dataInclusao" : "13/01/2018"
+}
+
+> db.todo.find({ $or: [{ "descricao" : /l$/}, { "descricao": /t$/ }]} ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a2"),
+        "ordem" : 5,
+        "titulo" : "Titulo D",
+        "descricao" : "react",
+        "concluida" : "false",
+        "dataInclusao" : "05/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a4"),
+        "ordem" : 7,
+        "titulo" : "Titulo D",
+        "descricao" : "javascript",
+        "concluida" : "true",
+        "dataInclusao" : "07/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143aa"),
+        "ordem" : 13,
+        "titulo" : "Titulo K",
+        "descricao" : "html",
+        "concluida" : "false",
+        "dataInclusao" : "13/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143af"),
+        "ordem" : 3,
+        "titulo" : "Titulo B",
+        "descricao" : "native script",
+        "concluida" : "true",
+        "dataInclusao" : "03/01/2018"
+}
+> db.todo.find({ "descricao" : /^b/ } ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a8"),
+        "ordem" : 11,
+        "titulo" : "Titulo H",
+        "descricao" : "bootstrap",
+        "concluida" : "true",
+        "dataInclusao" : "11/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a9"),
+        "ordem" : 12,
+        "titulo" : "Titulo J",
+        "descricao" : "backbone",
+        "concluida" : "true",
+        "dataInclusao" : "12/01/2018"
+}
+> db.todo.find({ $or: [{ "descricao" : /^j/}, { "descricao": /^h/ }]} ).pretty()
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a4"),
+        "ordem" : 7,
+        "titulo" : "Titulo D",
+        "descricao" : "javascript",
+        "concluida" : "true",
+        "dataInclusao" : "07/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143a7"),
+        "ordem" : 10,
+        "titulo" : "Titulo G",
+        "descricao" : "jquery",
+        "concluida" : "false",
+        "dataInclusao" : "10/01/2018"
+}
+{
+        "_id" : ObjectId("5bfc74fd84f2395a449143aa"),
+        "ordem" : 13,
+        "titulo" : "Titulo K",
+        "descricao" : "html",
+        "concluida" : "false",
+        "dataInclusao" : "13/01/2018"
